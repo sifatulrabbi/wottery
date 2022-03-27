@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(helmet());
 app.use(
     cors({
-        origin: ["http://localhost"],
+        origin: ["http://localhost:3000"],
     }),
 );
 

@@ -13,18 +13,18 @@ class InMemoryDb {
                 id: v4(),
                 title: this.randSentence(),
                 summary:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non lectus non magna bibendum consectetur. Mauris et neque gravida.",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non lectus non magna bibendum consectetur",
                 type: (Math.random() * 10) % 2 === 0 ? "free" : "premium",
                 price: Math.floor(Math.random() * 50) + 1,
                 in_at: new Date().toISOString(),
-                exp_at: new Date(Date.now() + 123456).toISOString(),
+                exp_at: new Date(Date.now() + 323456593).toISOString(),
             };
             this.save(lottery);
         }
     }
 
     private randSentence(): string {
-        const length = 8;
+        const length = 4;
         const wordsArr = words.split(" ");
         const arr = [];
         for (let i = 0; i < length; i++) {

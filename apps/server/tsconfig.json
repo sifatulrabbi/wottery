@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "es2016",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "module": "commonjs",
+        "rootDir": "./src",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "declaration": true,
+        "declarationMap": true,
+        "outDir": "./build",
+        "declarationDir": "./",
+        "esModuleInterop": false,
+        "strict": true,
+        "strictNullChecks": true,
+        "useUnknownInCatchVariables": true,
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "skipLibCheck": true
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+}

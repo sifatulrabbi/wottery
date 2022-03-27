@@ -1,0 +1,12 @@
+{
+    "name": "tottery",
+    "version": "0.0.1",
+    "description": "Lottery Application with TypeScript",
+    "main": "index.js",
+    "author": "Sifatul <mdsifatulislam.rabbi@gmail.com> (https://sifatulrabbi.github.io)",
+    "license": "MIT",
+    "private": true,
+    "workspaces": [
+        "./apps/*"
+    ]
+}

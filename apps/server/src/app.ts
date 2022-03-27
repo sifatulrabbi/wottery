@@ -1,6 +1,7 @@
 import * as express from "express";
 import helmet from "helmet";
 import * as cors from "cors";
+import {router} from "./router";
 
 export const app = express();
 
@@ -12,3 +13,5 @@ app.use(
         origin: ["http://localhost"],
     }),
 );
+
+app.use("/api", router);

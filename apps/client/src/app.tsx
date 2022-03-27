@@ -1,11 +1,14 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
+import {Home} from "./pages";
+import {Navbar} from "./components";
 
 function App() {
     return (
         <>
+            <Navbar />
             <Routes>
-                <Route />
+                <Route path="/" element={<Home />} />
             </Routes>
         </>
     );

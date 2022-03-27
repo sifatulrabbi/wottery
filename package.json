@@ -1,5 +1,5 @@
 {
-    "name": "tottery",
+    "name": "wottery",
     "version": "0.0.1",
     "description": "Lottery Application with TypeScript",
     "main": "index.js",

@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*,
+*::after,
+*::before {
+    @apply font-primary;
+}
+
+body {
+    @apply bg-slate-50;
+}

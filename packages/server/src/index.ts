@@ -1,5 +1,3 @@
-import {server} from "./server";
+import {startServer} from "./server";
 
-server.listen(8080, () => {
-    console.log(server.address());
-});
+startServer();

@@ -2,5 +2,5 @@
     "watch": ["src", ".env.local", ".env.development"],
     "ext": ".ts",
     "ignore": ["node_modules", "tests"],
-    "exec": "ts-node src/server.ts"
+    "exec": "ts-node src/index.ts"
 }

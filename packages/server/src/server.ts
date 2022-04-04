@@ -1,19 +1,30 @@
 import * as http from "http";
 import {app} from "./app";
 import {Server} from "socket.io";
+import {
+    ServerToClientEvents,
+    ClientToServerEvents,
+    SocketData,
+    InterServerEvents,
+} from "./interfaces";
 
-const server = http.createServer(app);
-const io = new Server(server, {
+export const server = http.createServer(app);
+export const io = new Server<
+    ClientToServerEvents,
+    ServerToClientEvents,
+    InterServerEvents,
+    SocketData
+>(server, {
     cors: {
-        origin: ["http://localhost"],
+        origin: ["http://localhost:3000"],
         methods: ["POST", "GET"],
     },
 });
 
 io.on("connection", (socket) => {
     console.log("New client: %d", socket.id);
-});
-
-server.listen(8080, () => {
-    console.log("Server is running on port: %d", 8080);
+    socket.emit("talk", "Hi there new client. How are you?");
+    socket.on("talk", (msg) => {
+        console.log(msg);
+    });
 });

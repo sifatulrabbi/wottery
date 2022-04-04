@@ -9,7 +9,7 @@ const config: Config.InitialOptions = {
     coverageProvider: "v8",
     moduleDirectories: ["node_modules"],
     moduleFileExtensions: ["js", "ts"],
-    roots: ["tests"],
+    roots: ["src/__tests__"],
     testMatch: [
         "**/__tests__/**/*.[jt]s?(x)",
         "**/?(*.)+(spec|test).[tj]s?(x)",

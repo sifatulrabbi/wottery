@@ -1,5 +1,5 @@
 import * as express from "express";
-import {db} from "./memory-db";
+import {db} from "../../memory-db";
 
 export const router = express.Router();
 

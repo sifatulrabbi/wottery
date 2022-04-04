@@ -1,7 +1,7 @@
 import * as express from "express";
 import helmet from "helmet";
 import * as cors from "cors";
-import {router} from "./router";
+import {router} from "./routers";
 
 export const app = express();
 

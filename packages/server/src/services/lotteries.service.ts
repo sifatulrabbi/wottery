@@ -60,6 +60,34 @@ class LotteriesService {
             done(err);
         }
     }
+
+    async updateOne(id: string, data: any, done: IDone<any[]>): Promise<void> {
+        try {
+            const result = await db.query(`update ${this.tableName}
+            set ${data.name ? `name = '${data.name}'` : ""}
+            where id = '${id}'`);
+            if (!result.rows) return done(null, null);
+            this.getOne(id, (err, result) => {
+                done(null, result);
+            });
+        } catch (err) {
+            console.error(err);
+            done(err);
+        }
+    }
+
+    async removeOne(id: string, done: IDone<any>): Promise<void> {
+        try {
+            const result = await db.query(
+                `delete from ${this.tableName} where id = '${id}';`,
+            );
+            if (!result.rows) return done(null, null);
+            done(null, {message: "Lottery removed"});
+        } catch (err) {
+            console.error(err);
+            done(err);
+        }
+    }
 }
 
 export const lotteriesService = new LotteriesService();

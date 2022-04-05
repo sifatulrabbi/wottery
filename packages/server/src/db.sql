@@ -1,5 +1,5 @@
 create table lotteries (
-    id varchar(64) UNIQUE not null,
+    id varchar(64) unique not null,
     name varchar(100) not null,
     price int not null,
     description varchar(250) not null,

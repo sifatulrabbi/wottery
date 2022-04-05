@@ -1,27 +1,4 @@
-export interface ILottery {
-    id: string;
-    title: string;
-    summary: string;
-    price: number;
-    type: "free" | "premium";
-    in_at: string;
-    exp_at: string;
-}
+export type IDone<T> = (err: null | Error | unknown, result?: null | T) => void;
 
-export interface ClientToServerEvents {
-    talk: (msg: string) => void;
-}
-
-export interface ServerToClientEvents {
-    talk: (msg: string) => void;
-    new_lottery: (lottery: ILottery) => void;
-}
-
-export interface InterServerEvents {
-    ping: (msg: string) => void;
-}
-
-export interface SocketData {
-    name: string;
-    age: number;
-}
+export * from "./lotteries.interface";
+export * from "./socket.interface";

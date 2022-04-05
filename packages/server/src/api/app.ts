@@ -2,6 +2,7 @@ import * as express from "express";
 import helmet from "helmet";
 import * as cors from "cors";
 import {router} from "./routers";
+import {handleError} from "./middlewares";
 
 export const app = express();
 
@@ -15,3 +16,5 @@ app.use(
 );
 
 app.use("/api", router);
+
+app.use(handleError);
